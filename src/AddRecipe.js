@@ -3,10 +3,7 @@ import recipes from "./Recipes";
 
 const AddRecipe = (props) => {
     
-  const getFieldValue = (id) => {
-    const el = document.getElementById(id);
-    return el.value;
-  };
+  const getFieldValue = (id) => document.getElementById(id).value;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +15,6 @@ const AddRecipe = (props) => {
     let newRec = {name, dishtype, image, ingredients, instructions};
     recipes.push(newRec)
   };
-  console.log(props)
   return (
     <form
       onSubmit={(e) => {

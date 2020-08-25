@@ -5,29 +5,28 @@ import next from "./next.png";
 import AddRecipe from "./AddRecipe";
 
 function Recipe(props) {
-  console.log("Is First", props.isFirst);
-  console.log("Is Last", props.isLast);
-  const displayLeftArrowStyle = props.isFirst ? '0.1' : '1';
-  console.log('displayLeftArrowStyle', displayLeftArrowStyle)
-  const displayRightArrowStyle = props.isLast ? '0.1' : '1'
-  console.log('displayRightArrowStyle', displayRightArrowStyle)
+  const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
+  const displayRightArrowStyle = props.isLast ? "0.1" : "1";
   return (
     <div className="container">
-      
-        <a>
-          <img
-            onClick={() => props.isFirst ? null : props.prev()}
-            src={prev}
-            style={{ width: "50px", height: "50px", opacity: displayLeftArrowStyle }}
-            alt="previous recipe"
-          />
-        </a>
-     
+      <a>
+        <img
+          onClick={() => (props.isFirst ? null : props.prev())}
+          src={prev}
+          style={{
+            width: "50px",
+            height: "50px",
+            opacity: displayLeftArrowStyle,
+          }}
+          alt="previous recipe"
+        />
+      </a>
+
       <div className="RecipeBook">
         <div className="pageOne">
           <h1>{props.name}</h1>
           <h2>{props.dishtype} Dish</h2>
-          <img src={props.image} alt='A Homemade Dish'/>
+          <img src={props.image} alt="A Homemade Dish" />
         </div>
         <div className="pageTwo">
           <h1>Ingredients</h1>
@@ -36,14 +35,18 @@ function Recipe(props) {
           <h3>{props.instructions}</h3>
         </div>
       </div>
-        <a>
-          <img
-            onClick={() => props.isLast ? null : props.next()}
-            src={next}
-            style={{ width: "50px", height: "50px", opacity: displayRightArrowStyle }}
-            alt="next recipe"
-          />
-        </a>
+      <a>
+        <img
+          onClick={() => (props.isLast ? null : props.next())}
+          src={next}
+          style={{
+            width: "50px",
+            height: "50px",
+            opacity: displayRightArrowStyle,
+          }}
+          alt="next recipe"
+        />
+      </a>
     </div>
   );
 }
@@ -64,8 +67,11 @@ function ShowRecipe(props) {
     <div>
       <h1 className="pageheader">My Recipe Book</h1>
       {newRecipe ? (
-        <AddRecipe showRecipeBook={() => {
-          showRecipeBook()}}/>
+        <AddRecipe
+          showRecipeBook={() => {
+            showRecipeBook();
+          }}
+        />
       ) : (
         <>
           <AddRecipeOption onClick={onClick} />
