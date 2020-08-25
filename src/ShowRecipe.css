@@ -1,0 +1,84 @@
+.pageheader{
+  
+}
+
+.AddNew button{
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  opacity: 0.9;
+	-webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px 100px;
+  height: 700px;
+  width: 1800px;
+  align-content: center;
+}
+
+.container a {
+  align-self: center;
+}
+
+.RecipeBook {
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  background-color: #fce9db;
+  padding: 20px;
+}
+
+.pageOne {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-top-right-radius: 60px;
+  background-color: aliceblue;
+  -webkit-box-shadow: inset -54px 0px 31px -42px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: inset -54px 0px 31px -42px rgba(0, 0, 0, 0.57);
+  box-shadow: inset -54px 0px 31px -42px rgba(0, 0, 0, 0.57);
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  text-decoration: underline;
+}
+
+.pageOne img {
+  width: 70%;
+  margin: 20px 0px;
+}
+
+.pageTwo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  border-top-left-radius: 60px;
+  background-color: aliceblue;
+}
+
+.pageTwo h3 {
+  margin: 50px;
+  font-size: 0.7em;
+}
+
+
