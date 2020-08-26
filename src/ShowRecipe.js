@@ -22,9 +22,9 @@ function Recipe(props) {
         />
       </a>
 
-      <div className="RecipeBook">
+      <div className="RecipeBook recipe">
         <div className="pageOne">
-          <h1>{props.name}</h1>
+          <h1 className='name'>{props.name}</h1>
           <h2>{props.dishtype} Dish</h2>
           <img src={props.image} alt="A Homemade Dish" />
         </div>
