@@ -13,6 +13,7 @@ function Recipe(props) {
     <div className="container">
       <a>
         <img
+          className="prevArrow"
           onClick={() => (props.isFirst ? null : props.prev())}
           src={prev}
           style={{
@@ -27,14 +28,14 @@ function Recipe(props) {
       <div className="RecipeBook recipe">
         <div className="pageOne">
           <h1 className='name'>{props.name}</h1>
-          <h2>{props.dishtype} Dish</h2>
-          <img src={props.image} alt="A Homemade Dish" />
+          <h2 className='dishtype'>{props.dishtype} Dish</h2>
+          <img className='recipeImage' src={props.image} alt="A Homemade Dish" />
         </div>
         <div className="pageTwo">
-          <h1>Ingredients</h1>
-          <h3>{props.ingredients}</h3>
-          <h1>Instructions</h1>
-          <h3>{props.instructions}</h3>
+          <h1 className='ingredientsTitle'>Ingredients</h1>
+          <h3 className='ingredients' >{props.ingredients}</h3>
+          <h1 className='instructionsTitle'>Instructions</h1>
+          <h3 className='instructions'>{props.instructions}</h3>
           <div className='bottomIcons'>
             <Edit />
             <Trash />
@@ -43,6 +44,7 @@ function Recipe(props) {
       </div>
       <a>
         <img
+          className="nextArrow"
           onClick={() => (props.isLast ? null : props.next())}
           src={next}
           style={{
