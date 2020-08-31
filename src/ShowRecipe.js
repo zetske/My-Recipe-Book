@@ -3,6 +3,8 @@ import "./ShowRecipe.css";
 import prev from "./prev.png";
 import next from "./next.png";
 import AddRecipe from "./AddRecipe";
+import Trash from "./icons/trash";
+import Edit from "./icons/edit";
 
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
@@ -33,6 +35,10 @@ function Recipe(props) {
           <h3>{props.ingredients}</h3>
           <h1>Instructions</h1>
           <h3>{props.instructions}</h3>
+          <div className='bottomIcons'>
+            <Edit />
+            <Trash />
+          </div>
         </div>
       </div>
       <a>

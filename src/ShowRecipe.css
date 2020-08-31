@@ -81,4 +81,13 @@ h1 {
   font-size: 0.7em;
 }
 
+.bottomIcons {
+  width: 150px;
+  align-self: flex-end;
+}
+
+.bottomIcons svg {
+  width: 40px;
+  height: 30px;
+}
 
