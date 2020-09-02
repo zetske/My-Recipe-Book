@@ -5,6 +5,7 @@ import next from "./next.png";
 import AddRecipe from "./AddRecipe";
 import Trash from "./icons/trash";
 import Edit from "./icons/edit";
+import Add from "./icons/add";
 
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
@@ -37,8 +38,12 @@ function Recipe(props) {
           <h1 className='instructionsTitle'>Instructions</h1>
           <h3 className='instructions'>{props.instructions}</h3>
           <div className='bottomIcons'>
-            <Edit />
-            <Trash />
+            <Add onClick={() => {
+              console.log('clicked')
+              props.showAddRecipe()
+              }}></Add>
+            <Edit onClick={() => console.log('edit-button clicked')}/>
+            <Trash onClick={() => console.log('trash-button clicked')}/>
           </div>
         </div>
       </div>
@@ -60,16 +65,17 @@ function Recipe(props) {
 }
 
 function AddRecipeOption(props) {
+  console.log(props)
   return (
-    <div className="AddNew">
-      <button onClick={props.onClick}>Add a new recipe</button>
-    </div>
+    
+      <Add onClick={props.onClick}/>
+    
   );
 }
 
 function ShowRecipe(props) {
   const [newRecipe, setNewRecipe] = React.useState(false);
-  const onClick = () => setNewRecipe(true);
+  const showAddRecipe = () => setNewRecipe(true);
   const showRecipeBook = () => setNewRecipe(false);
   return (
     <div>
@@ -82,7 +88,7 @@ function ShowRecipe(props) {
         />
       ) : (
         <>
-          <AddRecipeOption onClick={onClick} />
+          
           <Recipe
             isLast={props.isLast}
             isFirst={props.isFirst}
@@ -93,7 +99,15 @@ function ShowRecipe(props) {
             image={props.recipe.image}
             ingredients={props.recipe.ingredients}
             instructions={props.recipe.instructions}
-          />
+            showAddRecipe={showAddRecipe}
+          >
+            {/* <AddRecipeOption onClick={onClick} /> */}
+            <Add onClick={() => {
+              console.log('clicked')
+            }}/>
+          </Recipe>
+          
+          {/* <Add onClick={onClick} /> */}
         </>
       )}
     </div>

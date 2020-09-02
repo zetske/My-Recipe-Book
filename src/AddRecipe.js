@@ -16,7 +16,8 @@ const AddRecipe = (props) => {
     recipes.push(newRec)
   };
   return (
-    <form
+    <div className='formBoard'>
+      <form
       onSubmit={(e) => {
         handleSubmit(e);
         props.showRecipeBook()
@@ -55,7 +56,8 @@ const AddRecipe = (props) => {
         placeholder="Instructions"
       />
       <input id="btn" className="field" type="submit" value="Submit" />
-    </form>
+     </form>
+    </div>
   );
 };
 

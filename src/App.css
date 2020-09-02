@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url(./background_2.jpeg);
+  background-image: url(./background_table.jpeg);
   background-size: cover;
 }
 
@@ -11,14 +11,24 @@
   justify-content: space-evenly;
 }
 
+.formBoard{
+  background-image: url(./background_new.jpeg);
+  width: 850px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .newRecipe {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 500px;
+  width: 700px;
   height: 450px;
   justify-content: space-between;
   background-color: #fce9db;
+  /* background-image: url(./background_4.jpeg); */
   padding: 30px;
   border-radius: 5px;
 }
