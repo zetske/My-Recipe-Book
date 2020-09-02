@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url(./background_table.jpeg);
+  background-image: url(./backgrounds/background_table.jpeg);
   background-size: cover;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .formBoard{
-  background-image: url(./background_new.jpeg);
+  background-image: url(./backgrounds/background_new.jpeg);
   width: 850px;
   height: 600px;
   display: flex;
