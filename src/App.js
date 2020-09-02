@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
 import ShowRecipe from "./ShowRecipe";
-import recipes from "./Recipes";
+import getRecipes from './utilities'
 
 function App() {
+  const recipes = getRecipes();
   const [current, setCurrent] = useState(0);
-
   const next = () => {
     setCurrent(current + 1);
   };
