@@ -1,5 +1,29 @@
 const recipes = [
   {
+    name: "Creamy Tuscan Garlic Chicken (Keto)",
+    dishtype: "Main",
+    image: './pictures/tuscangarlichicken2.jpg',
+    ingredients:
+      "1½ pounds boneless skinless chicken breasts thinly sliced, 2 Tablespoons olive oil, 1 cup heavy cream, 1/2 cup chicken broth, 1 teaspoon garlic powder, 1 teaspoon italian seasoning, 1/2 cup parmesan cheese, 1 cup spinach chopped, 1/2 cup sun dried tomatoes",
+    instructions:
+      "In a large skillet add olive oil and cook the chicken on medium high heat for 3-5 minutes on each side or until brown on each side and cooked until no longer pink in center. Remove chicken and set aside on a plate. Add the heavy cream, chicken broth, garlic powder, italian seasoning, and parmesan cheese. Whisk over medium high heat until it starts to thicken. Add the spinach and sundried tomatoes and let it simmer until the spinach starts to wilt. Add the chicken back to the pan and serve over pasta if desired."
+ 
+  },
+  {
+    name: "Mexican Cauliflower Rice Skillet (Keto)",
+    dishtype: "Main",
+    image: "./pictures/Mexican-Cauli.jpg",
+    ingredients: "1 lb ground beef, 1/4 medium onion diced, 1/2 red pepper diced, 3 tbsp taco seasoning, 1 cup diced tomatoes, 12 ounces cauliflower rice fresh or frozen, 1/2 cup chicken broth, 1 1/2 cups shredded Cheddar cheese or Mexican Blend",
+    instructions: "In a large skillet over medium heat, brown the ground beef until almost cooked through (just a little pink). Add the onion and pepper and continue to cook until no longer pink. Stir in the taco seasoning. Add the tomatoes and cauliflower rice and stir to combine. Stir in the broth and bring to a simmer. Reduce the heat to medium low and cook until the cauliflower rice begins to soften (8 to 10 minutes for frozen). Sprinkle the skillet with the cheese and cover. Let cook until the cheese is melted, 3 or 4 minutes. Remove from heat and top with your favourite toppings like sour cream, avocado, and chopped cilantro.",
+  },
+  {
+    name: 'Cheesy Chaffles',
+    dishtype: 'Side',
+    image: './pictures/chaffles.jpg',
+    ingredients: '2 egg whites 2 tablespoons of water 1 tablespoon coconut flour or 2 tablespoons of Almond flour, 2 tablespoons of softened cream cheese, 1/4 tsp of Baking powder, 1/2 cup grated cheese or your choice',
+    instructions: 'Mix all ingredients together, except the grated cheese. Make sure your waffle iron is hot! Put some grated cheese on the griddle and melt it on there first. Then add the batter. Close waffle Iron. Wait for steam to stop coming out of waffle iron. '
+  },
+  {
     name: "Chicken & Mushroom Soup",
     dishtype: "Main",
     image: './pictures/photo-soup.jpeg',
