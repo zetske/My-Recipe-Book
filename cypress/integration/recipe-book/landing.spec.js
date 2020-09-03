@@ -11,7 +11,7 @@ describe('Landing', () => {
     });
     it('displays the first recipe', () => {
         cy.get('.recipe .name')
-        .should('contain.text', 'Chicken & Mushroom Soup')
+        .should('contain.text', 'Creamy Tuscan Garlic Chicken (Keto)')
     });
     it('displays the recipe type', () => {
         cy.get('.recipe .dishtype')
@@ -23,7 +23,7 @@ describe('Landing', () => {
     });
     it('displays ingredients', () => {
         cy.get('.recipe .ingredients')
-        .should('contain.text', '2 tablespoons chopped fresh parsley leaves')
+        .should('contain.text', '1½ pounds boneless skinless chicken breasts')
     });
     it('displays instructions title', () => {
         cy.get('.recipe .instructionsTitle')
@@ -31,7 +31,7 @@ describe('Landing', () => {
     });
     it('displays instructions', () => {
         cy.get('.recipe .instructions')
-        .should('contain.text', 'Heat olive oil in a large stockpot')
+        .should('contain.text', 'In a large skillet add olive oil')
     });
     it('displays left navigational arrow as gray', () => {
         cy.get('.prevArrow')
