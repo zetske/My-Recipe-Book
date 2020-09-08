@@ -6,6 +6,7 @@ import AddRecipe from "./AddRecipe";
 import Trash from "./icons/trash";
 import Edit from "./icons/edit";
 import Add from "./icons/add";
+import Modal from "./modal";
 
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
@@ -28,22 +29,31 @@ function Recipe(props) {
 
       <div className="RecipeBook recipe">
         <div className="pageOne">
-          <h1 className='name'>{props.name}</h1>
-          <h2 className='dishtype'>{props.dishtype} Dish</h2>
-          <img className='recipeImage' src={props.image} alt="A Homemade Dish" />
+          <h1 className="name">{props.name}</h1>
+          <h2 className="dishtype">{props.dishtype} Dish</h2>
+          <img
+            className="recipeImage"
+            src={props.image}
+            alt="A Homemade Dish"
+          />
         </div>
         <div className="pageTwo">
-          <h1 className='ingredientsTitle'>Ingredients</h1>
-          <h3 className='ingredients' >{props.ingredients}</h3>
-          <h1 className='instructionsTitle'>Instructions</h1>
-          <h3 className='instructions'>{props.instructions}</h3>
-          <div className='bottomIcons'>
-            <Add onClick={() => {
-              console.log('clicked')
-              props.showAddRecipe()
-              }}></Add>
-            <Edit onClick={() => console.log('edit-button clicked')}/>
-            <Trash onClick={() => console.log('trash-button clicked')}/>
+          <h1 className="ingredientsTitle">Ingredients</h1>
+          <h3 className="ingredients">{props.ingredients}</h3>
+          <h1 className="instructionsTitle">Instructions</h1>
+          <h3 className="instructions">{props.instructions}</h3>
+          <div className="bottomIcons">
+            <Add
+              onClick={() => {
+                props.showAddRecipe();
+              }}
+            ></Add>
+            <Edit onClick={() => console.log("edit-button clicked")} />
+            <Trash
+              onClick={() => {
+                props.showDeletePrompt();
+              }}
+            />
           </div>
         </div>
       </div>
@@ -65,18 +75,18 @@ function Recipe(props) {
 }
 
 function AddRecipeOption(props) {
-  console.log(props)
-  return (
-    
-      <Add onClick={props.onClick}/>
-    
-  );
+  console.log(props);
+  return <Add onClick={props.onClick} />;
 }
 
 function ShowRecipe(props) {
   const [newRecipe, setNewRecipe] = React.useState(false);
   const showAddRecipe = () => setNewRecipe(true);
   const showRecipeBook = () => setNewRecipe(false);
+
+  const [deletePrompt, setDeletePrompt] = React.useState(true);
+  const showDeletePrompt = () => setDeletePrompt(true);
+
   return (
     <div>
       <h1 className="pageheader">My Recipe Book</h1>
@@ -88,7 +98,16 @@ function ShowRecipe(props) {
         />
       ) : (
         <>
-          
+          {deletePrompt ? (
+            <Modal closeModal={() => setDeletePrompt(false)}>
+              <p>Are you sure you want to delete this recipe?</p>
+              <button className="yesBtn">Yes</button>
+              <button className="noBtn">No</button>
+            </Modal>
+          ) : (
+            <div>option 2</div>
+          )}
+
           <Recipe
             isLast={props.isLast}
             isFirst={props.isFirst}
@@ -100,13 +119,16 @@ function ShowRecipe(props) {
             ingredients={props.recipe.ingredients}
             instructions={props.recipe.instructions}
             showAddRecipe={showAddRecipe}
+            showDeletePrompt={showDeletePrompt}
           >
             {/* <AddRecipeOption onClick={onClick} /> */}
-            <Add onClick={() => {
-              console.log('clicked')
-            }}/>
+            <Add
+              onClick={() => {
+                console.log("clicked");
+              }}
+            />
           </Recipe>
-          
+
           {/* <Add onClick={onClick} /> */}
         </>
       )}
