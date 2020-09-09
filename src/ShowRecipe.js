@@ -7,6 +7,7 @@ import Trash from "./icons/trash";
 import Edit from "./icons/edit";
 import Add from "./icons/add";
 import Modal from "./modal";
+import recipes from "./Recipes";
 
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
@@ -74,22 +75,18 @@ function Recipe(props) {
   );
 }
 
-function AddRecipeOption(props) {
-  console.log(props);
-  return <Add onClick={props.onClick} />;
-}
-
 function ShowRecipe(props) {
   const [newRecipe, setNewRecipe] = React.useState(false);
   const showAddRecipe = () => setNewRecipe(true);
   const showRecipeBook = () => setNewRecipe(false);
 
-  const [deletePrompt, setDeletePrompt] = React.useState(true);
+  const [deletePrompt, setDeletePrompt] = React.useState(false);
   const showDeletePrompt = () => setDeletePrompt(true);
 
   return (
     <div>
       <h1 className="pageheader">My Recipe Book</h1>
+      <h5>Created by Anzette Muntingh</h5>
       {newRecipe ? (
         <AddRecipe
           showRecipeBook={() => {
@@ -101,12 +98,22 @@ function ShowRecipe(props) {
           {deletePrompt ? (
             <Modal closeModal={() => setDeletePrompt(false)}>
               <p>Are you sure you want to delete this recipe?</p>
-              <button className="yesBtn">Yes</button>
-              <button className="noBtn">No</button>
+              <button
+                onClick={() => {
+                  props.deleteRecipe();
+                  setDeletePrompt(false);
+                }}
+                className="yesBtn"
+              >
+                Yes
+              </button>
+              <button 
+              onClick={() => {
+                setDeletePrompt(false);
+              }}
+              className="noBtn">No</button>
             </Modal>
-          ) : (
-            <div>option 2</div>
-          )}
+          ) : <></>}
 
           <Recipe
             isLast={props.isLast}
@@ -121,15 +128,12 @@ function ShowRecipe(props) {
             showAddRecipe={showAddRecipe}
             showDeletePrompt={showDeletePrompt}
           >
-            {/* <AddRecipeOption onClick={onClick} /> */}
             <Add
               onClick={() => {
                 console.log("clicked");
               }}
             />
           </Recipe>
-
-          {/* <Add onClick={onClick} /> */}
         </>
       )}
     </div>

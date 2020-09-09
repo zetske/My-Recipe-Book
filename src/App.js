@@ -15,6 +15,20 @@ function App() {
   const isFirst = 0 === current;
   const isLast = recipes.length - 1 === current;
   const currentRecipe = recipes[current];
+
+  console.log(current)
+  console.log(recipes)
+
+  const deleteRecipe = () => {
+    const clonedRecipes = [...recipes];
+    clonedRecipes.splice(current, 1);
+    localStorage.setItem("recipes", JSON.stringify(clonedRecipes));
+    console.log(current)
+    console.log(recipes)
+
+    next();
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +37,7 @@ function App() {
           recipe={currentRecipe}
           next={next}
           prev={prev}
+          deleteRecipe={deleteRecipe}
           isLast={isLast}
           isFirst={isFirst}
         />
