@@ -1,9 +1,8 @@
 import React from "react";
-import getRecipes from "./utilities";
 
 const getFieldValue = (id) => document.getElementById(id).value;
 
-const handleSubmit = (event) => {
+const handleSubmit = (event, props) => {
   event.preventDefault();
   const name = getFieldValue("name");
   const dishtype = getFieldValue("dishtype");
@@ -11,56 +10,68 @@ const handleSubmit = (event) => {
   const ingredients = getFieldValue("ingredients");
   const instructions = getFieldValue("instructions");
   let newRecipe = { name, dishtype, image, ingredients, instructions };
-  const recipes = getRecipes();
-  recipes.push(newRecipe);
-  localStorage.setItem("recipes", JSON.stringify(recipes));
+  props.editRecipe(newRecipe);
+  props.setEditPrompt(false);
 };
 
-const AddRecipe = (props) => {
+const EditRecipe = (props) => {
   return (
     <div className="formBoard">
       <form
         onSubmit={(e) => {
-          handleSubmit(e);
+          handleSubmit(e, props);
           props.showRecipeBook();
         }}
         className="newRecipe"
       >
         <input
-          id="recipe-title"
+          id="name"
           className="field"
           type="text"
           required
           placeholder="Name your newest creation"
-        />
+          defaultValue={props.recipe.name}
+        ></input>
         <label>
           Dish type
-          <select id="dishtype">
+          <select id="dishtype" defaultValue={props.recipe.dishtype}>
             <option value="Starter">Starter</option>
             <option value="Main">Main</option>
             <option value="Side">Side</option>
             <option value="Dessert">Dessert</option>
           </select>
         </label>
-        <input id="image" className="field" type="file" label="Add Picture" />
+        <input
+          id="image"
+          className="field"
+          type="file"
+          label="Add Picture"
+        ></input>
         <input
           className="field"
           type="text"
           required
           id="ingredients"
           placeholder="Ingredients"
-        />
+          defaultValue={props.recipe.ingredients}
+        ></input>
         <input
           className="field"
           type="text"
           required
           id="instructions"
           placeholder="Instructions"
+          defaultValue={props.recipe.instructions}
+        ></input>
+        <input
+          id="btn"
+          className="field"
+          type="submit"
+          value="Submit"
         />
-        <input id="btn" className="field" type="submit" value="Submit" />
       </form>
     </div>
   );
 };
 
-export default AddRecipe;
+export default EditRecipe;

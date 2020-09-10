@@ -4,7 +4,8 @@ import ShowRecipe from "./ShowRecipe";
 import getRecipes from './utilities'
 
 function App() {
-  const recipes = getRecipes();
+  const originalRecipes = getRecipes();
+  const [recipes, setRecipes] = useState(originalRecipes)
   const [current, setCurrent] = useState(0);
   const next = () => {
     setCurrent(current + 1);
@@ -16,19 +17,18 @@ function App() {
   const isLast = recipes.length - 1 === current;
   const currentRecipe = recipes[current];
 
-  console.log(current)
-  console.log(recipes)
-
   const deleteRecipe = () => {
     const clonedRecipes = [...recipes];
     clonedRecipes.splice(current, 1);
+    setRecipes(clonedRecipes);
     localStorage.setItem("recipes", JSON.stringify(clonedRecipes));
-    console.log(current)
-    console.log(recipes)
-
-    next();
   }
-
+  const editRecipe = (editedRecipe) => {
+    const clonedRecipes = [...recipes];
+    clonedRecipes.splice(current, 1, editedRecipe);
+    setRecipes(clonedRecipes);
+    localStorage.setItem("recipes", JSON.stringify(clonedRecipes));
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -38,6 +38,7 @@ function App() {
           next={next}
           prev={prev}
           deleteRecipe={deleteRecipe}
+          editRecipe={editRecipe}
           isLast={isLast}
           isFirst={isFirst}
         />

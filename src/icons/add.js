@@ -4,7 +4,6 @@ function Add(props) {
   return (
     <svg
       onClick={() => {
-        console.log(props)
         props.onClick();
       }}
       viewBox="0 0 20 20"

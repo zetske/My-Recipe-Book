@@ -7,7 +7,8 @@ import Trash from "./icons/trash";
 import Edit from "./icons/edit";
 import Add from "./icons/add";
 import Modal from "./modal";
-import recipes from "./Recipes";
+import EditRecipe from "./EditRecipe";
+// import recipes from "./Recipes";
 
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
@@ -49,7 +50,10 @@ function Recipe(props) {
                 props.showAddRecipe();
               }}
             ></Add>
-            <Edit onClick={() => console.log("edit-button clicked")} />
+            <Edit onClick={() => {
+              props.showEditPrompt();
+              }} 
+            />
             <Trash
               onClick={() => {
                 props.showDeletePrompt();
@@ -83,6 +87,9 @@ function ShowRecipe(props) {
   const [deletePrompt, setDeletePrompt] = React.useState(false);
   const showDeletePrompt = () => setDeletePrompt(true);
 
+  const [editPrompt, setEditPrompt] = React.useState(false);
+  const showEditPrompt = () => setEditPrompt(true);
+
   return (
     <div>
       <h1 className="pageheader">My Recipe Book</h1>
@@ -107,13 +114,33 @@ function ShowRecipe(props) {
               >
                 Yes
               </button>
-              <button 
-              onClick={() => {
-                setDeletePrompt(false);
-              }}
-              className="noBtn">No</button>
+              <button
+                onClick={() => {
+                  setDeletePrompt(false);
+                }}
+                className="noBtn"
+              >
+                No
+              </button>
             </Modal>
-          ) : <></>}
+          ) : (
+            <></>
+          )}
+
+          {editPrompt ? (
+            <Modal closeModal={() => {
+              setEditPrompt(false)}}
+             >
+              <p>Edit this recipe?</p>
+              <EditRecipe 
+              setEditPrompt={setEditPrompt}
+              editRecipe={props.editRecipe}
+              recipe={props.recipe} 
+              showRecipeBook={showRecipeBook}/>
+            </Modal>
+          ) : (
+            <></>
+          )}
 
           <Recipe
             isLast={props.isLast}
@@ -127,12 +154,8 @@ function ShowRecipe(props) {
             instructions={props.recipe.instructions}
             showAddRecipe={showAddRecipe}
             showDeletePrompt={showDeletePrompt}
+            showEditPrompt={showEditPrompt}
           >
-            <Add
-              onClick={() => {
-                console.log("clicked");
-              }}
-            />
           </Recipe>
         </>
       )}
