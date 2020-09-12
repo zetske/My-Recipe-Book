@@ -1,5 +1,3 @@
-// import {  } from "module";
-
 describe('Landing', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')

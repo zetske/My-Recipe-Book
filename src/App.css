@@ -18,6 +18,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0.25rem;
+  width: 45vw;
+  padding: 2rem;
+  position: relative;
 }
 
 .newRecipe {

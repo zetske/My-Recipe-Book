@@ -131,7 +131,6 @@ function ShowRecipe(props) {
             <Modal closeModal={() => {
               setEditPrompt(false)}}
              >
-              <p>Edit this recipe?</p>
               <EditRecipe 
               setEditPrompt={setEditPrompt}
               editRecipe={props.editRecipe}
@@ -141,7 +140,6 @@ function ShowRecipe(props) {
           ) : (
             <></>
           )}
-
           <Recipe
             isLast={props.isLast}
             isFirst={props.isFirst}

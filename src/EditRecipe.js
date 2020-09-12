@@ -22,11 +22,11 @@ const EditRecipe = (props) => {
           handleSubmit(e, props);
           props.showRecipeBook();
         }}
-        className="newRecipe"
+        className="newRecipe edit-recipe"
       >
         <input
           id="name"
-          className="field"
+          className="field edit-name"
           type="text"
           required
           placeholder="Name your newest creation"
@@ -34,7 +34,7 @@ const EditRecipe = (props) => {
         ></input>
         <label>
           Dish type
-          <select id="dishtype" defaultValue={props.recipe.dishtype}>
+          <select id="dishtype" className="edit-dishtype" defaultValue={props.recipe.dishtype}>
             <option value="Starter">Starter</option>
             <option value="Main">Main</option>
             <option value="Side">Side</option>
@@ -43,12 +43,12 @@ const EditRecipe = (props) => {
         </label>
         <input
           id="image"
-          className="field"
+          className="field edit-image"
           type="file"
           label="Add Picture"
         ></input>
         <input
-          className="field"
+          className="field edit-ingredients"
           type="text"
           required
           id="ingredients"
@@ -56,7 +56,7 @@ const EditRecipe = (props) => {
           defaultValue={props.recipe.ingredients}
         ></input>
         <input
-          className="field"
+          className="field edit-instructions"
           type="text"
           required
           id="instructions"
@@ -65,7 +65,7 @@ const EditRecipe = (props) => {
         ></input>
         <input
           id="btn"
-          className="field"
+          className="field edit-submit"
           type="submit"
           value="Submit"
         />
