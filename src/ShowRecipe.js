@@ -1,7 +1,7 @@
 import React from "react";
 import "./ShowRecipe.css";
-import prev from "./prev.png";
-import next from "./next.png";
+import prev from "./nav/prev.png";
+import next from "./nav/next.png";
 import AddRecipe from "./AddRecipe";
 import Trash from "./icons/trash";
 import Edit from "./icons/edit";
@@ -29,7 +29,10 @@ function Recipe(props) {
         />
       </a>
 
-      <div className="RecipeBook recipe">
+      <div className='page-one-back-1'></div>
+        <div className='page-one-back-2'></div>
+        <div className='page-one-back-3'></div>
+        <div className='page-one-back-4'></div>
         <div className="pageOne">
           <h1 className="name">{props.name}</h1>
           <h2 className="dishtype">{props.dishtype} Dish</h2>
@@ -40,10 +43,13 @@ function Recipe(props) {
           />
         </div>
         <div className="pageTwo">
+          <div className='recipe-info'>
           <h1 className="ingredientsTitle">Ingredients</h1>
           <h3 className="ingredients">{props.ingredients}</h3>
           <h1 className="instructionsTitle">Instructions</h1>
           <h3 className="instructions">{props.instructions}</h3>
+          </div>
+          {/* <Decoration/> */}
           <div className="bottomIcons">
             <Add
               onClick={() => {
@@ -60,8 +66,13 @@ function Recipe(props) {
               }}
             />
           </div>
+          
         </div>
-      </div>
+        <div className='page-two-back-1'></div>
+        <div className='page-two-back-2'></div>
+        <div className='page-two-back-3'></div>
+        <div className='page-two-back-4'></div>
+      
       <a>
         <img
           className="nextArrow"
@@ -92,8 +103,8 @@ function ShowRecipe(props) {
 
   return (
     <div>
-      <h1 className="pageheader">My Recipe Book</h1>
-      <h5>Created by Anzette Muntingh</h5>
+      {/* <h1 className="pageheader">Lets Grababyte !</h1> */}
+      {/* <h5>Created by Anzette Muntingh</h5> */}
       {newRecipe ? (
         <AddRecipe
           showRecipeBook={() => {
@@ -157,6 +168,7 @@ function ShowRecipe(props) {
           </Recipe>
         </>
       )}
+      
     </div>
   );
 }
