@@ -1,5 +1,6 @@
 import React from "react";
 import getRecipes from "./utilities";
+import './AddRecipe.css'
 
 const getFieldValue = (id) => document.getElementById(id).value;
 

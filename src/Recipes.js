@@ -24,6 +24,26 @@ const recipes = [
     instructions: 'Mix all ingredients together, except the grated cheese. Make sure your waffle iron is hot! Put some grated cheese on the griddle and melt it on there first. Then add the batter. Close waffle Iron. Wait for steam to stop coming out of waffle iron. '
   },
   {
+    name: "Grilled Eggplant with Feta and Herbs",
+    dishtype: "Side",
+    image: './pictures/eggplant.png',
+    ingredients:
+      "2 large eggplants, cut in uniform slices 3/4 inch thick. 2 tsp. salt, for salting eggplant (see notes). 2 T olive oil, for brushing on eggplant. 1/4 cup chopped fresh mint (see notes). 1/4 cup chopped fresh cilantro (see notes). 1/2 cup crumbled Feta (or more)",
+    instructions:
+      "Cut both ends off the eggplants and cut into slices 3/4 inches thick. If you're salting the eggplant, lay it out on paper towels and sprinkle with salt. Let the eggplant sit about 20 minutes, or until you see beads of water released. Then turn over and sprinkle with salt and let sit about 20 minutes more on the second side. When you've turned the eggplant over and salted it the second time, start to preheat gas or charcoal barbecue grill to medium high. (You can only hold your hand there for 2-3 seconds at that heat.) While eggplant sits, put garlic, salt, lemon juice, and shallots or red onion into food processor fitted with steel blade, pulse until all ingredients are well combined, then let sit for 10 minutes. After ten minutes, put mixture in small bowl, stir in ground cumin, Aleppo Pepper (affiliate link) or a slightly smaller amount of Cayenne, and Spike Seasoning (affiliate link) or other all purpose seasoning blend, then whisk in olive oil. Wash fresh herbs in a salad spinner if needed and finely chop with a large knife. Crumble Feta into a small bowl.  After eggplant has been sitting with salt for the second 20 minutes, wipe the water (and salt) away from the eggplant with dry paper towel and put it on a baking sheet. Brush eggplant with olive oil on both sides. Lay eggplant slices on the grill. If you want criss-cross grill marks, grill the eggplant about 3-4 minutes on the first side, then lift up the edge to see if the grill marks are dark enough. When you see good grill marks, rotate each piece of eggplant and cook about 3-4 minutes more. Turn eggplant over and cook 3-4 minutes more on the second side, or until it's done to your liking. Arrange eggplant on a serving tray or baking sheet, drizzle with garlic-cumin vinaigrette, and sprinkle with crumbled feta and herbs.",
+  },
+
+  {
+    name: "Keto Frikkadel Bake",
+    dishtype: "Main",
+    image: './pictures/frikkadelle.png',
+    ingredients:
+      "1 lb mince, 1 lb Italian sausage1 lb Italian sausage, 1 cup shredded mozzarella1 cup shredded mozzarella, 1/3 cup grated or shredded parmesan1/3 cup grated or shredded parmesan, 1 shredded zucchini about 1 cup1 shredded zucchini about 1 cup, 1 egg1 egg, 2 tsp dried minced onion2 tsp dried minced onion, 2 tsp dried minced garlic2 tsp dried minced garlic, 2 tsp dried basil2 tsp dried basil, 1 tsp salt1 tsp salt, 1 cup marinara sauce, 8 oz shredded cheese (I used a two cheese pizza blend of mozzarella and provolone)8 oz shredded cheese",
+    instructions:
+      "Preheat oven to 400. Spray a casserole dish with cooking spray. Combine all the ingredients for the meatballs and mix thoroughly. Make about 24 meatballs and put them in the casserole dish. . Bake for 30 minutes or until the meatballs are cooked through. Carefully drain the cooking liquid from the casserole dish.. Top with the sauce and cheese. Bake for an additional 10-15 minutes or until the cheese is melted.",
+  },
+
+  {
     name: "Chicken & Mushroom Soup",
     dishtype: "Main",
     image: './pictures/photo-soup.jpeg',
