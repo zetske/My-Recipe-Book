@@ -3,10 +3,6 @@ describe("Navigation", () => {
     cy.visit("http://localhost:3000/");
     cy.get(".nextArrow").click();
   });
-  it("displays the title", () => {
-    const title = "My Recipe Book";
-    cy.get(".pageheader").should("contain.text", title);
-  });
   it("should navigate right on click", () => {
     cy.get(".recipe .dishtype").should("contain.text", "Main Dish");
   });
