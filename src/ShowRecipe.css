@@ -186,7 +186,7 @@ h1 {
 
 .pageTwo h3 {
   margin: 25px;
-  font-size: 0.7em;
+  font-size: 0.9em;
   max-height: 200px;
   overflow: scroll;
 }
@@ -194,7 +194,7 @@ h1 {
 .bottomIcons {
   position: absolute;
   bottom: 110px;
-  right: 170px;
+  right: 120px;
 }
 
 .bottomIcons svg {
