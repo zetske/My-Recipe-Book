@@ -1,11 +1,34 @@
-.container {
+:root {
+  --from-top: 10px;
+  --from-side: 50%;
+}
+
+.main {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
   height: 650px;
-  max-width: 1400px;
+  width: 1400px;
 }
 
 .container a {
   align-self: center;
+}
+
+.prev-arrow {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+}
+
+.next-arrow {
+  position: absolute;
+  right: -15px;
+  top: 50%;
 }
 
 .page {
@@ -30,8 +53,8 @@
   border-color: #A9A9A9;
   border-style: solid;
   border-width: 1px;
-  right: 50%;
-  top: 85px;
+  right: calc(var(--from-side));
+  top: calc(var(--from-top));
 }
 
 h1 {
@@ -58,7 +81,7 @@ h1 {
   background-color: #D3D3D3;
   z-index: 4;
   right: 50%;
-  top: 90px;
+  top: calc(var(--from-top) + 5px);
 }
 
 .page-one-back-2 {
@@ -66,7 +89,7 @@ h1 {
   background-color: #A9A9A9;
   z-index: 3;
   right: 50.4%;
-  top: 95px;
+  top: calc(var(--from-top) + 10px);
 }
 
 .page-one-back-3 {
@@ -74,7 +97,7 @@ h1 {
   background-color: #808080;
   z-index: 2;
   right: 50.8%;
-  top: 100px;
+  top: calc(var(--from-top) + 15px);
 }
 
 .page-one-back-4 {
@@ -82,7 +105,7 @@ h1 {
   background-color: #696969;
   z-index: 1;
   right: 51.2%;
-  top: 105px;
+  top: calc(var(--from-top) + 20px);
 }
 
 .page-two {
@@ -96,39 +119,39 @@ h1 {
   border-color: #A9A9A9;
   border-style: solid;
   border-width: 1px;
-  left: 50%;
-  top: 85px;
+  left: calc(var(--from-side));
+  top: calc(var(--from-top));
 }
 .page-two-back-1 {
   border-top-left-radius: 60px;
   background-color: #D3D3D3;
   z-index: 4;
-  left: 50.5%;
-  top: 90px;
+  left: calc(var(--from-side) + 0.5%);
+  top: calc(var(--from-top) + 5px);
 }
 
 .page-two-back-2 {
   border-top-left-radius: 60px;
   background-color: #A9A9A9;
   z-index: 3;
-  left: 51%;
-  top: 95px;
+  left: calc(var(--from-side) + 1%);
+  top: calc(var(--from-top) + 10px);
 }
 
 .page-two-back-3 {
   border-top-left-radius: 60px;
   background-color: #808080;
   z-index: 2;
-  left: 51.5%;
-  top: 100px;
+  left: calc(var(--from-side) + 1.5%);
+  top: calc(var(--from-top) + 15px);
 }
 
 .page-two-back-4 {
   border-top-left-radius: 60px;
   background-color: #696969;
   z-index: 1;
-  left: 51.9%;
-  top: 105px;
+  left: calc(var(--from-side) + 1.9%);
+  top: calc(var(--from-top) + 20px);
 }
 
 .page-two h3 {
@@ -140,7 +163,7 @@ h1 {
 
 .bottom-icons {
   position: absolute;
-  bottom: 110px;
+  bottom: 20px;
   right: 120px;
 }
 

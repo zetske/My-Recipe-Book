@@ -14,9 +14,8 @@ function Recipe(props) {
   const displayRightArrowStyle = props.isLast ? "0.1" : "1";
   return (
     <div className="container">
-      <a>
         <img
-          className="prevArrow"
+          className="prev-arrow"
           onClick={() => (props.isFirst ? null : props.prev())}
           src={prev}
           style={{
@@ -26,8 +25,6 @@ function Recipe(props) {
           }}
           alt="previous recipe"
         />
-      </a>
-
       <div className='page page-one-back-1'></div>
         <div className='page page-one-back-2'></div>
         <div className='page page-one-back-3'></div>
@@ -70,10 +67,8 @@ function Recipe(props) {
         <div className='page page-two-back-2'></div>
         <div className='page page-two-back-3'></div>
         <div className='page page-two-back-4'></div>
-      
-      <a>
         <img
-          className="nextArrow"
+          className="next-arrow"
           onClick={() => (props.isLast ? null : props.next())}
           src={next}
           style={{
@@ -83,7 +78,6 @@ function Recipe(props) {
           }}
           alt="next recipe"
         />
-      </a>
     </div>
   );
 }
@@ -100,7 +94,7 @@ function ShowRecipe(props) {
   const showEditPrompt = () => setEditPrompt(true);
 
   return (
-    <div>
+    <div className="main">
       {newRecipe ? (
         <AddRecipe
           showRecipeBook={() => {
