@@ -8,7 +8,6 @@ import Edit from "./icons/edit";
 import Add from "./icons/add";
 import Modal from "./modal";
 import EditRecipe from "./EditRecipe";
-// import recipes from "./Recipes";
 
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
@@ -102,8 +101,6 @@ function ShowRecipe(props) {
 
   return (
     <div>
-      {/* <h1 className="pageheader">Lets Grababyte !</h1> */}
-      {/* <h5>Created by Anzette Muntingh</h5> */}
       {newRecipe ? (
         <AddRecipe
           showRecipeBook={() => {
