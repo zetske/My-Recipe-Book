@@ -28,11 +28,11 @@ function Recipe(props) {
         />
       </a>
 
-      <div className='page-one-back-1'></div>
-        <div className='page-one-back-2'></div>
-        <div className='page-one-back-3'></div>
-        <div className='page-one-back-4'></div>
-        <div className="pageOne">
+      <div className='page page-one-back-1'></div>
+        <div className='page page-one-back-2'></div>
+        <div className='page page-one-back-3'></div>
+        <div className='page page-one-back-4'></div>
+        <div className="page page-one">
           <h1 className="name">{props.name}</h1>
           <h2 className="dishtype">{props.dishtype} Dish</h2>
           <img
@@ -41,14 +41,14 @@ function Recipe(props) {
             alt="A Homemade Dish"
           />
         </div>
-        <div className="pageTwo">
+        <div className="page page-two">
           <div className='recipe-info'>
           <h1 className="ingredientsTitle">Ingredients</h1>
           <h3 className="ingredients">{props.ingredients}</h3>
           <h1 className="instructionsTitle">Instructions</h1>
           <h3 className="instructions">{props.instructions}</h3>
           </div>
-          <div className="bottomIcons">
+          <div className="bottom-icons">
             <Add
               onClick={() => {
                 props.showAddRecipe();
@@ -66,10 +66,10 @@ function Recipe(props) {
           </div>
           
         </div>
-        <div className='page-two-back-1'></div>
-        <div className='page-two-back-2'></div>
-        <div className='page-two-back-3'></div>
-        <div className='page-two-back-4'></div>
+        <div className='page page-two-back-1'></div>
+        <div className='page page-two-back-2'></div>
+        <div className='page page-two-back-3'></div>
+        <div className='page page-two-back-4'></div>
       
       <a>
         <img

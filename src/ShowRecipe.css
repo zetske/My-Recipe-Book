@@ -8,9 +8,14 @@
   align-self: center;
 }
 
-.pageOne {
+.page {
   width: 640px;
+  height: 630px;
+  margin: 10px 10px 10px 0px;
   position: absolute;
+}
+
+.page-one {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -27,7 +32,6 @@
   border-width: 1px;
   right: 50%;
   top: 85px;
-  height: 630px;
 }
 
 h1 {
@@ -43,7 +47,7 @@ h1 {
      1px 1px 0 #F4E6EB;
 }
 
-.pageOne img {
+.page-one img {
   width: 80%;
   max-height: 550px;
   margin: 10px 0px;
@@ -51,60 +55,40 @@ h1 {
 
 .page-one-back-1 {
   border-top-right-radius: 60px;
-  width: 640px;
-  margin: 10px 10px 10px 0px;
-  border-top-right-radius: 60px;
   background-color: #D3D3D3;
-  position: absolute;
-  height: 630px;
   z-index: 4;
   right: 50%;
   top: 90px;
 }
 
 .page-one-back-2 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-right-radius: 60px;
   background-color: #A9A9A9;
-  position: absolute;
-  height: 630px;
   z-index: 3;
   right: 50.4%;
   top: 95px;
 }
 
 .page-one-back-3 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-right-radius: 60px;
   background-color: #808080;
-  position: absolute;
-  height: 630px;
   z-index: 2;
   right: 50.8%;
   top: 100px;
 }
 
 .page-one-back-4 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-right-radius: 60px;
   background-color: #696969;
-  position: absolute;
-  height: 630px;
   z-index: 1;
   right: 51.2%;
   top: 105px;
 }
 
-.pageTwo {
-  width: 640px;
-  position: absolute;
+.page-two {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px 10px 10px 0px;
   justify-content: flex-start;
   border-top-left-radius: 60px;
   background-color: aliceblue;
@@ -113,72 +97,54 @@ h1 {
   border-style: solid;
   border-width: 1px;
   left: 50%;
-  height: 630px;
   top: 85px;
 }
 .page-two-back-1 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-left-radius: 60px;
   background-color: #D3D3D3;
-  position: absolute;
-  height: 630px;
   z-index: 4;
   left: 50.5%;
   top: 90px;
 }
 
 .page-two-back-2 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-left-radius: 60px;
   background-color: #A9A9A9;
-  position: absolute;
-  height: 630px;
   z-index: 3;
   left: 51%;
   top: 95px;
 }
 
 .page-two-back-3 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-left-radius: 60px;
   background-color: #808080;
-  position: absolute;
-  height: 630px;
   z-index: 2;
   left: 51.5%;
   top: 100px;
 }
 
 .page-two-back-4 {
-  width: 640px;
-  margin: 10px 10px 10px 0px;
   border-top-left-radius: 60px;
   background-color: #696969;
-  position: absolute;
-  height: 630px;
   z-index: 1;
   left: 51.9%;
   top: 105px;
 }
 
-.pageTwo h3 {
+.page-two h3 {
   margin: 25px;
   font-size: 0.9em;
   max-height: 200px;
   overflow: auto;
 }
 
-.bottomIcons {
+.bottom-icons {
   position: absolute;
   bottom: 110px;
   right: 120px;
 }
 
-.bottomIcons svg {
+.bottom-icons svg {
   width: 40px;
   height: 30px;
 }
-
