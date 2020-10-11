@@ -49,7 +49,6 @@ function Recipe(props) {
           <h1 className="instructionsTitle">Instructions</h1>
           <h3 className="instructions">{props.instructions}</h3>
           </div>
-          {/* <Decoration/> */}
           <div className="bottomIcons">
             <Add
               onClick={() => {

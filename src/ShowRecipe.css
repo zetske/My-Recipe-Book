@@ -188,7 +188,7 @@ h1 {
   margin: 25px;
   font-size: 0.9em;
   max-height: 200px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .bottomIcons {
