@@ -2,7 +2,7 @@ const recipes = [
   {
     name: "Creamy Tuscan Garlic Chicken (Keto)",
     dishtype: "Main",
-    image: './pictures/tuscangarlichicken2.jpg',
+    image: "https://images.unsplash.com/photo-1537081956137-3931105e2d37?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "1½ pounds boneless skinless chicken breasts thinly sliced, 2 Tablespoons olive oil, 1 cup heavy cream, 1/2 cup chicken broth, 1 teaspoon garlic powder, 1 teaspoon italian seasoning, 1/2 cup parmesan cheese, 1 cup spinach chopped, 1/2 cup sun dried tomatoes",
     instructions:
@@ -12,21 +12,21 @@ const recipes = [
   {
     name: "Mexican Cauliflower Rice Skillet (Keto)",
     dishtype: "Main",
-    image: "./pictures/Mexican-Cauli.jpg",
+    image: "https://images.unsplash.com/photo-1519624213695-6819a985fb0b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients: "1 lb ground beef, 1/4 medium onion diced, 1/2 red pepper diced, 3 tbsp taco seasoning, 1 cup diced tomatoes, 12 ounces cauliflower rice fresh or frozen, 1/2 cup chicken broth, 1 1/2 cups shredded Cheddar cheese or Mexican Blend",
     instructions: "In a large skillet over medium heat, brown the ground beef until almost cooked through (just a little pink). Add the onion and pepper and continue to cook until no longer pink. Stir in the taco seasoning. Add the tomatoes and cauliflower rice and stir to combine. Stir in the broth and bring to a simmer. Reduce the heat to medium low and cook until the cauliflower rice begins to soften (8 to 10 minutes for frozen). Sprinkle the skillet with the cheese and cover. Let cook until the cheese is melted, 3 or 4 minutes. Remove from heat and top with your favourite toppings like sour cream, avocado, and chopped cilantro.",
   },
   {
     name: 'Cheesy Chaffles',
     dishtype: 'Side',
-    image: './pictures/chaffles.jpg',
+    image: "https://images.unsplash.com/photo-1597990566967-a0cffc700e1a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients: '2 egg whites 2 tablespoons of water 1 tablespoon coconut flour or 2 tablespoons of Almond flour, 2 tablespoons of softened cream cheese, 1/4 tsp of Baking powder, 1/2 cup grated cheese or your choice',
     instructions: 'Mix all ingredients together, except the grated cheese. Make sure your waffle iron is hot! Put some grated cheese on the griddle and melt it on there first. Then add the batter. Close waffle Iron. Wait for steam to stop coming out of waffle iron. '
   },
   {
     name: "Grilled Eggplant with Feta and Herbs",
     dishtype: "Side",
-    image: './pictures/eggplant.png',
+    image: "https://images.unsplash.com/photo-1591813144634-eebdeab865e1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "2 large eggplants, cut in uniform slices 3/4 inch thick. 2 tsp. salt, for salting eggplant (see notes). 2 T olive oil, for brushing on eggplant. 1/4 cup chopped fresh mint (see notes). 1/4 cup chopped fresh cilantro (see notes). 1/2 cup crumbled Feta (or more)",
     instructions:
@@ -36,7 +36,7 @@ const recipes = [
   {
     name: "Keto Frikkadel Bake",
     dishtype: "Main",
-    image: './pictures/frikkadelle.png',
+    image: "https://images.unsplash.com/photo-1547928576-b822bc410bdf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "1 lb mince, 1 lb Italian sausage1 lb Italian sausage, 1 cup shredded mozzarella1 cup shredded mozzarella, 1/3 cup grated or shredded parmesan1/3 cup grated or shredded parmesan, 1 shredded zucchini about 1 cup1 shredded zucchini about 1 cup, 1 egg1 egg, 2 tsp dried minced onion2 tsp dried minced onion, 2 tsp dried minced garlic2 tsp dried minced garlic, 2 tsp dried basil2 tsp dried basil, 1 tsp salt1 tsp salt, 1 cup marinara sauce, 8 oz shredded cheese (I used a two cheese pizza blend of mozzarella and provolone)8 oz shredded cheese",
     instructions:
@@ -46,7 +46,7 @@ const recipes = [
   {
     name: "Chicken & Mushroom Soup",
     dishtype: "Main",
-    image: './pictures/photo-soup.jpeg',
+    image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "1 tablespoon olive oil, 8 ounces boneless, skinless chicken thighs, cut into 1-inch chunks Kosher salt and freshly ground black pepper, 2 tablespoons unsalted butter, 3 cloves garlic, minced, 8 ounces cremini mushrooms, thinly sliced, 1 onion, diced, 3 carrots, peeled and diced, 2 stalks celery, diced, 1/2 teaspoon dried thyme, 1/4 cup all-purpose flour, 4 cups chicken stock, 1 bay leaf, 1/2 cup half and half, or more, as needed, 2 tablespoons chopped fresh parsley leaves, 1 sprig rosemary",
     instructions:
@@ -55,7 +55,7 @@ const recipes = [
   {
     name: "Homemade Bread",
     dishtype: "Side",
-    image: './pictures/photo-bread.jpeg',
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "1 tablespoon active dry yeast, 1 tablespoon sugar, 1 tablespoon salt, 2 cups warm water not over 110°F, 5 1/2 to 6 cups All-Purpose Flour, cornmeal or flour for dusting, boiling water",
     instructions:
@@ -64,7 +64,7 @@ const recipes = [
   {
     name: "Spaghetti",
     dishtype: "Main",
-    image: './pictures/photo-spaghetti.jpeg',
+    image: "https://images.unsplash.com/photo-1572441713132-c542fc4fe282?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "1 pound lean ground meat like beef, turkey, chicken or lamb, 3 tablespoons olive oil, 1 cup (130 grams) chopped onion, 3 garlic cloves, minced (1 tablespoon), 2 tablespoons tomato paste, 1/2 teaspoon dried oregano, Pinch crushed red pepper flakes, 1 cup water, broth or dry red wine, 1 (28-ounce) can crushed tomatoes, Salt and fresh ground black pepper, Handful fresh basil leaves, plus more for serving, 12 ounces dried spaghetti or favorite pasta shape, 1/2 cup shredded parmesan cheese",
     instructions:
@@ -73,7 +73,7 @@ const recipes = [
   {
     name: "Fish Tacos",
     dishtype: "Main",
-    image: './pictures/photo-tacos.jpeg',
+    image: "https://images.unsplash.com/photo-1512838243191-e81e8f66f1fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "3 tbsp. extra-virgin olive oil, Juice of 1 lime, 2 tsp. chili powder, 1 tsp. paprika , 1/2 tsp. ground cumin, 1/2 tsp. cayenne pepper, 1 1/2 lb. cod (or other flaky white fish), 1/2 tbsp. vegetable oil, Kosher salt, Freshly ground black pepper, 8 corn tortillas, 1 avocado, diced, Lime wedges, for serving, Sour cream, for serving, FOR THE CORN SLAW:, 1/4 c. mayonnaise, Juice of 1 lime, 2 tbsp. freshly chopped cilantro, 1 tbsp. honey, 2 c. shredded purple cabbage, 1 c. corn kernels, 1 jalapeño, minced",
     instructions:
@@ -82,7 +82,7 @@ const recipes = [
   {
     name: "Ramen",
     dishtype: "Main",
-    image: './pictures/photo-ramen.jpeg',
+    image: "https://images.unsplash.com/photo-1557872943-16a5ac26437e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "2 large eggs, 1 tablespoon olive oil, 4 cloves garlic, minced, 1 tablespoon freshly grated ginger, 4 cups reduced sodium chicken broth, 4 ounces shiitake mushrooms, 1 tablespoon reduced sodium soy sauce, 3 (5.6-ounce) packages refrigerated Yaki-Soba, seasoning sauce packets discarded*, 3 cups baby spinach, 8 slices Narutomaki, optional*, 1 carrot, grated, 2 tablespoons chopped chives",
     instructions:
@@ -91,7 +91,7 @@ const recipes = [
   {
     name: "Poke Bowl",
     dishtype: "Main",
-    image: './pictures/photo-poke.jpeg',
+    image: "https://images.unsplash.com/photo-1542354255-839e272e3408?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE3Mzc1MX0",
     ingredients:
       "For the tuna: 1/2 pound sushi grade tuna, cut into 1/2-inch cubes, 1/4 cup sliced scallions, 2 tablespoons reduced sodium soy sauce or gluten-free tamari, 1 teaspoon sesame oil, 1/2 teaspoon sriracha. For the spicy mayo: 2 tablespoons light mayonnaise, 2 teaspoons sriracha sauce. For The Bowl: 1 cup cooked short grain brown rice or sushi white rice, 1 cup cucumbers, (from 2 Persian) peeled and diced 1/2-inch cubes, 1/2 medium Hass avocado, (3 ounces) sliced, 2 scallions, sliced for garnish, 1 teaspoon black sesame seeds",
     instructions:
