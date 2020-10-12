@@ -5,10 +5,11 @@ const unsplash = new Unsplash({
   accessKey: "csfbbQR_pN9Bix3Kr6qdJmYkawMtdyeYYWxeNlRzMMs",
 });
 
-export default function SearchPhotos() {
+export default function SearchPhotos(props) {
 
   const [query, setQuery] = useState(" ");
   const [pics, setPics] = useState([]);
+
 
   const searchPhotos = async (e) => {
     e.preventDefault();
@@ -17,19 +18,20 @@ export default function SearchPhotos() {
     .photos(query)
     .then(toJson)
     .then((json) => {
-      // console.log(json);
+      console.log(json);
       setPics(json.results);
     });
   };
 
   return (
     <>
-      <form className="form" onSubmit={searchPhotos}> 
+      <div className="form"> 
         <label className="label" htmlFor="query"> 
           {" "}
           📷
         </label>
         <input
+          id="image"
           type="text"
           name="query"
           className="input"
@@ -37,10 +39,10 @@ export default function SearchPhotos() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button type="submit" className="button">
+        <button type="button" onClick={searchPhotos} className="btn search-button">
           Search
         </button>
-      </form>
+      </div>
 
       <div className="card-list">
         {pics.map((pic) => (
@@ -49,20 +51,13 @@ export default function SearchPhotos() {
               className="card-image"
               alt={pic.alt_description}
               src={pic.urls.thumb}
-              // width="100%"
-              // height="100%"
-            ></img>
+              onClick={() => {
+                props.onImageSelection(pic.urls.thumb)
+              }}
+            />
           </div>
         ))}{" "}
       </div>
     </>
   );
 }
-
-// const SearchPhotos = (props) => {
-//   return (
-//     <div className="unsplash-search">
-
-//     </div>
-//   );
-// };

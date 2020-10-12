@@ -1,39 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import getRecipes from "./utilities";
 import './AddRecipe.css'
 import SearchPhotos from "./SearchPhotos";
 
 const getFieldValue = (id) => document.getElementById(id).value;
 
-// const handleSubmit = (event) => {
-//   event.preventDefault();
-//   const name = getFieldValue("name");
-//   const dishtype = getFieldValue("dishtype");
-//   const image = getFieldValue("image");
-//   const ingredients = getFieldValue("ingredients");
-//   const instructions = getFieldValue("instructions");
-//   let newRecipe = { name, dishtype, image, ingredients, instructions };
-//   const recipes = getRecipes();
-//   recipes.push(newRecipe);
-//   localStorage.setItem("recipes", JSON.stringify(recipes));
-// };
+const handleSubmit = (event, image) => {
+  event.preventDefault();
+  const name = getFieldValue("recipe-title");
+  const dishtype = getFieldValue("dishtype");
+  const ingredients = getFieldValue("ingredients");
+  const instructions = getFieldValue("instructions");
+  let newRecipe = { name, dishtype, image, ingredients, instructions };
+  const recipes = getRecipes();
+  recipes.push(newRecipe);
+  console.log(recipes)
+  localStorage.setItem("recipes", JSON.stringify(recipes));
+};
 
 const AddRecipe = (props) => {
-  
+  const [url, setUrl] = useState('')
+
+  const onImageSelection = (url) => {
+    setUrl(url)
+  }
+
   return (
     <div className="formBoard">
       <form
-        // onSubmit={(e) => {
-        //   handleSubmit(e);
-        //   props.showRecipeBook();
-        // }}
+        onSubmit={(e) => {
+          handleSubmit(e, url);
+          props.showRecipeBook();
+        }}
         className="newRecipe"
       >
         <input
           id="recipe-title"
           className="field"
           type="text"
-          required
+          // required
           placeholder="Name your newest creation"
         />
         <label>
@@ -49,19 +54,19 @@ const AddRecipe = (props) => {
         <input
           className="field"
           type="text"
-          required
+          // required
           id="ingredients"
           placeholder="Ingredients"
         />
         <input
           className="field"
           type="text"
-          required
+          // required
           id="instructions"
           placeholder="Instructions"
         />
-        <SearchPhotos />
-        <input id="btn" className="field" type="submit" value="Submit" />
+        <SearchPhotos onImageSelection={onImageSelection}/>
+        <input id="btn" className="field submit-btn" type="submit" value="Submit" />
       </form>
     </div>
   );

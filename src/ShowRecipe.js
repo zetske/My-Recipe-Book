@@ -12,6 +12,7 @@ import EditRecipe from "./EditRecipe";
 function Recipe(props) {
   const displayLeftArrowStyle = props.isFirst ? "0.1" : "1";
   const displayRightArrowStyle = props.isLast ? "0.1" : "1";
+
   return (
     <div className="container">
         <img
