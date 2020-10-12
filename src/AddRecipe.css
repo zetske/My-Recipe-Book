@@ -1,45 +1,50 @@
+/* .formBoard {
+  background-image: url(./backgrounds/background_new.jpeg);
+  width: 950px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  width: 45vw;
+  padding: 2rem;
+  position: relative;
+} */
 
-.formBoard{
-    background-image: url(./backgrounds/background_new.jpeg);
-    width: 850px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.25rem;
-    width: 45vw;
-    padding: 2rem;
-    position: relative;
-  }
-  
-  .newRecipe {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 700px;
-    height: 450px;
-    justify-content: space-between;
-    background-color: #fce9db;
-    /* background-image: url(./background_4.jpeg); */
-    padding: 30px;
-    border-radius: 5px;
-  }
-  
-  .newRecipe input {
-    height: 40px;
-  }
-  
-  #addIngredients {
-    padding: 10px;
-    height: 50px;
-  }
-  
-  #addInstructions {
-    height: 90px;
-    padding: 10px;
-  }
-  
-  .field{
-    border-radius: 7px;
-    padding: 10px;
-  }
+.newRecipe {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 900px;
+  height: 450px;
+  justify-content: space-between;
+  background-color: #fce9db;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.newRecipe input {
+  height: 40px;
+}
+
+#addIngredients {
+  padding: 10px;
+  height: 50px;
+}
+
+#addInstructions {
+  height: 90px;
+  padding: 10px;
+}
+
+.field {
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.card-list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: auto;
+}

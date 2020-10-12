@@ -1,30 +1,32 @@
 import React from "react";
 import getRecipes from "./utilities";
 import './AddRecipe.css'
+import SearchPhotos from "./SearchPhotos";
 
 const getFieldValue = (id) => document.getElementById(id).value;
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  const name = getFieldValue("name");
-  const dishtype = getFieldValue("dishtype");
-  const image = getFieldValue("image");
-  const ingredients = getFieldValue("ingredients");
-  const instructions = getFieldValue("instructions");
-  let newRecipe = { name, dishtype, image, ingredients, instructions };
-  const recipes = getRecipes();
-  recipes.push(newRecipe);
-  localStorage.setItem("recipes", JSON.stringify(recipes));
-};
+// const handleSubmit = (event) => {
+//   event.preventDefault();
+//   const name = getFieldValue("name");
+//   const dishtype = getFieldValue("dishtype");
+//   const image = getFieldValue("image");
+//   const ingredients = getFieldValue("ingredients");
+//   const instructions = getFieldValue("instructions");
+//   let newRecipe = { name, dishtype, image, ingredients, instructions };
+//   const recipes = getRecipes();
+//   recipes.push(newRecipe);
+//   localStorage.setItem("recipes", JSON.stringify(recipes));
+// };
 
 const AddRecipe = (props) => {
+  
   return (
     <div className="formBoard">
       <form
-        onSubmit={(e) => {
-          handleSubmit(e);
-          props.showRecipeBook();
-        }}
+        // onSubmit={(e) => {
+        //   handleSubmit(e);
+        //   props.showRecipeBook();
+        // }}
         className="newRecipe"
       >
         <input
@@ -43,7 +45,7 @@ const AddRecipe = (props) => {
             <option value="Dessert">Dessert</option>
           </select>
         </label>
-        <input id="image" className="field" type="file" label="Add Picture" />
+        {/* <input id="image" className="field" type="file" label="Add Picture" /> */}
         <input
           className="field"
           type="text"
@@ -58,6 +60,7 @@ const AddRecipe = (props) => {
           id="instructions"
           placeholder="Instructions"
         />
+        <SearchPhotos />
         <input id="btn" className="field" type="submit" value="Submit" />
       </form>
     </div>
