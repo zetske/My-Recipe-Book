@@ -37,7 +37,6 @@ function Recipe(props) {
             className="recipeImage"
             src={props.image}
             alt="A Homemade Dish"
-            // width='100px'
           />
         </div>
         <div className="page page-two">
