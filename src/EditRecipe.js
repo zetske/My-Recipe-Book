@@ -1,31 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import SearchPhotos from "./SearchPhotos";
+import getRecipes from "./utilities";
 
 const getFieldValue = (id) => document.getElementById(id).value;
 
-const handleSubmit = (event, props) => {
+const handleSubmit = (event, props, image) => {
   event.preventDefault();
-  const name = getFieldValue("name");
+  const name = getFieldValue("recipe-title");
   const dishtype = getFieldValue("dishtype");
-  const image = getFieldValue("image");
   const ingredients = getFieldValue("ingredients");
   const instructions = getFieldValue("instructions");
   let newRecipe = { name, dishtype, image, ingredients, instructions };
+  const recipes = getRecipes();
+  recipes.push(newRecipe);
   props.editRecipe(newRecipe);
   props.setEditPrompt(false);
 };
 
 const EditRecipe = (props) => {
+  const [url, setUrl] = useState(props.recipe.image)
+  const onImageSelection = (url) => {
+    setUrl(url)
+  }
   return (
     <div className="formBoard">
       <form
         onSubmit={(e) => {
-          handleSubmit(e, props);
+          handleSubmit(e, props, url);
           props.showRecipeBook();
         }}
         className="newRecipe edit-recipe"
       >
         <input
-          id="name"
+          id="recipe-title"
           className="field edit-name"
           type="text"
           required
@@ -42,12 +49,6 @@ const EditRecipe = (props) => {
           </select>
         </label>
         <input
-          id="image"
-          className="field edit-image"
-          type="file"
-          label="Add Picture"
-        ></input>
-        <input
           className="field edit-ingredients"
           type="text"
           required
@@ -63,6 +64,8 @@ const EditRecipe = (props) => {
           placeholder="Instructions"
           defaultValue={props.recipe.instructions}
         ></input>
+        <img id='edit-recipe-img' src={props.recipe.image} alt='a delicious dish' width='250px'/>
+         <SearchPhotos onImageSelection={onImageSelection}/>
         <input
           id="btn"
           className="field edit-submit"

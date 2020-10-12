@@ -37,6 +37,7 @@ function Recipe(props) {
             className="recipeImage"
             src={props.image}
             alt="A Homemade Dish"
+            // width='100px'
           />
         </div>
         <div className="page page-two">
@@ -97,11 +98,15 @@ function ShowRecipe(props) {
   return (
     <div className="main">
       {newRecipe ? (
-        <AddRecipe
-          showRecipeBook={() => {
-            showRecipeBook();
-          }}
-        />
+        <Modal closeModal={() => {
+          setNewRecipe(false)}}
+         >
+          <AddRecipe 
+          setNewRecipe={setNewRecipe}
+          newRecipe={props.newRecipe}
+          recipe={props.recipe} 
+          showRecipeBook={showRecipeBook}/>
+        </Modal>
       ) : (
         <>
           {deletePrompt ? (

@@ -9,6 +9,7 @@ export default function SearchPhotos(props) {
 
   const [query, setQuery] = useState(" ");
   const [pics, setPics] = useState([]);
+  const [selectedImage, setSelectedImage] = useState('')
 
 
   const searchPhotos = async (e) => {
@@ -18,7 +19,6 @@ export default function SearchPhotos(props) {
     .photos(query)
     .then(toJson)
     .then((json) => {
-      console.log(json);
       setPics(json.results);
     });
   };
@@ -48,11 +48,12 @@ export default function SearchPhotos(props) {
         {pics.map((pic) => (
           <div className="card" key={pic.id} width="50%">
             <img
-              className="card-image"
+              className={`card-image ${pic.urls.regular === selectedImage ? 'selection-active' : ''}`}
               alt={pic.alt_description}
               src={pic.urls.thumb}
               onClick={() => {
-                props.onImageSelection(pic.urls.thumb)
+                setSelectedImage(pic.urls.regular)
+                props.onImageSelection(pic.urls.regular)
               }}
             />
           </div>
