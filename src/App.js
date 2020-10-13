@@ -17,6 +17,12 @@ function App() {
   const isLast = recipes.length - 1 === current;
   const currentRecipe = recipes[current];
 
+  const addRecipe = (addedRecipe) => {
+    const clonedRecipes = [...recipes];
+    clonedRecipes.splice(current, 1, addedRecipe);
+    setRecipes(clonedRecipes);
+    localStorage.setItem("recipes", JSON.stringify(clonedRecipes));
+  }
   const deleteRecipe = () => {
     const clonedRecipes = [...recipes];
     clonedRecipes.splice(current, 1);
@@ -38,6 +44,7 @@ function App() {
           recipe={currentRecipe}
           next={next}
           prev={prev}
+          addRecipe={addRecipe}
           deleteRecipe={deleteRecipe}
           editRecipe={editRecipe}
           isLast={isLast}

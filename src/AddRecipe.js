@@ -5,17 +5,14 @@ import SearchPhotos from "./SearchPhotos";
 
 const getFieldValue = (id) => document.getElementById(id).value;
 
-const handleSubmit = (event, image) => {
+const handleSubmit = (event, image, props) => {
   event.preventDefault();
   const name = getFieldValue("recipe-title");
   const dishtype = getFieldValue("dishtype");
   const ingredients = getFieldValue("ingredients");
   const instructions = getFieldValue("instructions");
   let newRecipe = { name, dishtype, image, ingredients, instructions };
-  const recipes = getRecipes();
-  recipes.push(newRecipe);
-  console.log(recipes)
-  localStorage.setItem("recipes", JSON.stringify(recipes));
+  props.addRecipe(newRecipe)
 };
 
 const AddRecipe = (props) => {
@@ -29,7 +26,7 @@ const AddRecipe = (props) => {
     <div className="formBoard">
       <form
         onSubmit={(e) => {
-          handleSubmit(e, url);
+          handleSubmit(e, url, props);
           props.showRecipeBook();
         }}
         className="newRecipe"

@@ -103,7 +103,8 @@ function ShowRecipe(props) {
           <AddRecipe 
           setNewRecipe={setNewRecipe}
           newRecipe={props.newRecipe}
-          recipe={props.recipe} 
+          recipe={props.recipe}
+          addRecipe={props.addRecipe} 
           showRecipeBook={showRecipeBook}/>
         </Modal>
       ) : (
