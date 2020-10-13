@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
   background-image: url(./backgrounds/background_table.jpeg);
   background-size: cover;
 }
@@ -8,5 +7,20 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: space-evenly;
+}
+
+#logo {
+  display: flex;
+  padding: 30px;
+  font-family: 'Pacifico', cursive;
+  align-items: center;
+  position: fixed;
+  font-size: 25px;
+  color: white;
+  -webkit-text-fill-color: black; 
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
+  letter-spacing: 2px;
 }

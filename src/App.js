@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import ShowRecipe from "./ShowRecipe";
-import getRecipes from './utilities'
+import getRecipes from './utilities';
 
 function App() {
   const originalRecipes = getRecipes();
@@ -31,6 +31,7 @@ function App() {
   }
   return (
     <div className="App">
+      <span id='logo'>Click-Chef</span>
       <header className="App-header">
         <ShowRecipe
           className="mainpage"
