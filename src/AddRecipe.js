@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import getRecipes from "./utilities";
 import './AddRecipe.css'
 import SearchPhotos from "./SearchPhotos";
 
