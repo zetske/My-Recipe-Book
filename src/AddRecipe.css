@@ -59,15 +59,16 @@
 
 .card-image {
   border-radius: 5px;
+  border: 1px solid transparent;
 }
 
 .selection-active {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .card-image:hover {
   cursor: pointer;
-  opacity: 90%;
+  border: 1px solid black;
 }
 
 #edit-recipe-img{
