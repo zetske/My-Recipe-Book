@@ -14,7 +14,7 @@ function Recipe(props) {
   const displayRightArrowStyle = props.isLast ? "0.1" : "1";
 
   return (
-    <div className="container">
+    <div className="container recipe">
         <img
           className="prev-arrow"
           onClick={() => (props.isFirst ? null : props.prev())}

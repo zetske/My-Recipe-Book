@@ -1,7 +1,7 @@
 describe("Navigation", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/");
-    cy.get(".nextArrow").click();
+    cy.get(".next-arrow").click();
   });
   it("should navigate right on click", () => {
     cy.get(".recipe .dishtype").should("contain.text", "Main Dish");
@@ -28,12 +28,12 @@ describe("Navigation", () => {
     );
   });
   it("displays left navigational arrow as black", () => {
-    cy.get(".prevArrow").should(($image) => {
+    cy.get(".prev-arrow").should(($image) => {
       expect($image).to.have.css("opacity", "1");
     });
   });
   it("displays right navigational arrow as black", () => {
-    cy.get(".nextArrow").should(($image) => {
+    cy.get(".next-arrow").should(($image) => {
       expect($image).to.have.css("opacity", "1");
     });
   });

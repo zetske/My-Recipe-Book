@@ -27,13 +27,13 @@ describe('Landing', () => {
         .should('contain.text', 'In a large skillet add olive oil')
     });
     it('displays left navigational arrow as gray', () => {
-        cy.get('.prevArrow')
+        cy.get('.prev-arrow')
         .should(($image) => {
             expect($image).to.have.css('opacity', '0.1')
         })
     });
     it('displays right navigational arrow as black', () => {
-        cy.get('.nextArrow')
+        cy.get('.next-arrow')
         .should(($image) => {
             expect($image).to.have.css('opacity', '1')
         })
