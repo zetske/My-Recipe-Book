@@ -38,7 +38,7 @@ const AddRecipe = (props) => {
           id="recipe-title"
           className="field"
           type="text"
-          // required
+          required
           placeholder="Name your newest creation"
         />
         <label>
@@ -50,18 +50,17 @@ const AddRecipe = (props) => {
             <option value="Dessert">Dessert</option>
           </select>
         </label>
-        {/* <input id="image" className="field" type="file" label="Add Picture" /> */}
         <input
           className="field"
           type="text"
-          // required
+          required
           id="ingredients"
           placeholder="Ingredients"
         />
         <input
           className="field"
           type="text"
-          // required
+          required
           id="instructions"
           placeholder="Instructions"
         />
