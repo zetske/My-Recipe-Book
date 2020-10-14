@@ -50,7 +50,7 @@ describe("CRUD", () => {
       cy.get('.overlay .content').should('be.visible')
     });
     it('closes the modal', () => {
-        cy.get('.noBtn').click();
+        cy.get('.no-btn').click();
         cy.get('.recipe .name')
         .should('contain.text', 'Creamy Tuscan Garlic Chicken (Keto)');
     });
@@ -60,7 +60,7 @@ describe("CRUD", () => {
         .should('contain.text', 'Creamy Tuscan Garlic Chicken (Keto)');
     });
     it('deletes the recipe on selecting yes', () => {
-        cy.get('.yesBtn').click();
+        cy.get('.yes-btn').click();
         cy.get('.recipe .name')
         .should('contain.text', 'Mexican Cauliflower Rice Skillet (Keto)');
     });

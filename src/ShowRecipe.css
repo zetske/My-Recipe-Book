@@ -107,7 +107,7 @@ h1 {
   top: calc(var(--from-top) + 20px);
 }
 
-.recipeImage{
+.recipe-image{
   height: 400px;
 }
 

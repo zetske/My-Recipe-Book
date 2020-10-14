@@ -34,16 +34,16 @@ function Recipe(props) {
           <h1 className="name">{props.name}</h1>
           <h2 className="dishtype">{props.dishtype} Dish</h2>
           <img
-            className="recipeImage"
+            className="recipe-image"
             src={props.image}
             alt="A Homemade Dish"
           />
         </div>
         <div className="page page-two">
           <div className='recipe-info'>
-          <h1 className="ingredientsTitle">Ingredients</h1>
+          <h1 className="ingredients-title">Ingredients</h1>
           <h3 className="ingredients">{props.ingredients}</h3>
-          <h1 className="instructionsTitle">Instructions</h1>
+          <h1 className="instructions-title">Instructions</h1>
           <h3 className="instructions">{props.instructions}</h3>
           </div>
           <div className="bottom-icons">
@@ -117,7 +117,7 @@ function ShowRecipe(props) {
                   props.deleteRecipe();
                   setDeletePrompt(false);
                 }}
-                className="yesBtn"
+                className="yes-btn"
               >
                 Yes
               </button>
@@ -125,7 +125,7 @@ function ShowRecipe(props) {
                 onClick={() => {
                   setDeletePrompt(false);
                 }}
-                className="noBtn"
+                className="no-btn"
               >
                 No
               </button>

@@ -20,13 +20,13 @@ const EditRecipe = (props) => {
     setUrl(url)
   }
   return (
-    <div className="formBoard">
+    <div className="form-board">
       <form
         onSubmit={(e) => {
           handleSubmit(e, props, url);
           props.showRecipeBook();
         }}
-        className="newRecipe edit-recipe"
+        className="new-recipe edit-recipe"
       >
         <input
           id="recipe-title"
@@ -45,22 +45,22 @@ const EditRecipe = (props) => {
             <option value="Dessert">Dessert</option>
           </select>
         </label>
-        <input
+        <textarea
           className="field edit-ingredients"
           type="text"
           required
           id="ingredients"
           placeholder="Ingredients"
           defaultValue={props.recipe.ingredients}
-        ></input>
-        <input
+        />
+        <textarea
           className="field edit-instructions"
           type="text"
           required
           id="instructions"
           placeholder="Instructions"
           defaultValue={props.recipe.instructions}
-        ></input>
+        />
         <img id='edit-recipe-img' src={props.recipe.image} alt='a delicious dish' width='250px'/>
          <SearchPhotos onImageSelection={onImageSelection}/>
         <input

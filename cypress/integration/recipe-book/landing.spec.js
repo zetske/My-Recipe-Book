@@ -11,7 +11,7 @@ describe('Landing', () => {
         .should('contain.text', 'Main Dish')
     });
     it('displays ingredients title', () => {
-        cy.get('.recipe .ingredientsTitle')
+        cy.get('.recipe .ingredients-title')
         .should('contain.text', 'Ingredients')
     });
     it('displays ingredients', () => {
@@ -19,7 +19,7 @@ describe('Landing', () => {
         .should('contain.text', '1½ pounds boneless skinless chicken breasts')
     });
     it('displays instructions title', () => {
-        cy.get('.recipe .instructionsTitle')
+        cy.get('.recipe .instructions-title')
         .should('contain.text', 'Instructions')
     });
     it('displays instructions', () => {

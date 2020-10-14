@@ -22,13 +22,13 @@ const AddRecipe = (props) => {
   }
 
   return (
-    <div className="formBoard">
+    <div className="form-board">
       <form
         onSubmit={(e) => {
           handleSubmit(e, url, props);
           props.showRecipeBook();
         }}
-        className="newRecipe"
+        className="new-recipe"
       >
         <input
           id="recipe-title"
@@ -46,14 +46,14 @@ const AddRecipe = (props) => {
             <option value="Dessert">Dessert</option>
           </select>
         </label>
-        <input
+        <textarea
           className="field"
           type="text"
           required
           id="ingredients"
           placeholder="Ingredients"
         />
-        <input
+        <textarea
           className="field"
           type="text"
           required

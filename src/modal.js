@@ -8,7 +8,7 @@ const Modal = (props) => {
   const closeicon = () => (
     <Exit name="times"
       onClick={closeModal}
-      className='closeModal'
+      className='close-modal'
       style={{
         width: '30px',
         height: '30px',

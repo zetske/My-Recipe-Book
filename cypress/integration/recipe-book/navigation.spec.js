@@ -13,13 +13,13 @@ describe("Navigation", () => {
     );
   });
   it("displays ingredients title", () => {
-    cy.get(".recipe .ingredientsTitle").should("contain.text", "Ingredients");
+    cy.get(".recipe .ingredients-title").should("contain.text", "Ingredients");
   });
   it("displays ingredients", () => {
     cy.get(".recipe .ingredients").should("contain.text", "1 lb ground beef");
   });
   it("displays instructions title", () => {
-    cy.get(".recipe .instructionsTitle").should("contain.text", "Instructions");
+    cy.get(".recipe .instructions-title").should("contain.text", "Instructions");
   });
   it("displays instructions", () => {
     cy.get(".recipe .instructions").should(
