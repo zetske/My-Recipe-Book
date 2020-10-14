@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SearchPhotos from "./SearchPhotos";
-import getRecipes from "./utilities";
 
 const getFieldValue = (id) => document.getElementById(id).value;
 
