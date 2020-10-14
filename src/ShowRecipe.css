@@ -125,6 +125,7 @@ h1 {
   left: calc(var(--from-side));
   top: calc(var(--from-top));
 }
+
 .page-two-back-1 {
   border-top-left-radius: 60px;
   background-color: #D3D3D3;

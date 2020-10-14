@@ -11,8 +11,6 @@ const handleSubmit = (event, props, image) => {
   const ingredients = getFieldValue("ingredients");
   const instructions = getFieldValue("instructions");
   let newRecipe = { name, dishtype, image, ingredients, instructions };
-  const recipes = getRecipes();
-  recipes.push(newRecipe);
   props.editRecipe(newRecipe);
   props.setEditPrompt(false);
 };
