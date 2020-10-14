@@ -19,7 +19,7 @@ function App() {
 
   const addRecipe = (addedRecipe) => {
     const clonedRecipes = [...recipes];
-    clonedRecipes.push(current, 1, addedRecipe);
+    clonedRecipes.push(addedRecipe);
     setRecipes(clonedRecipes);
     localStorage.setItem("recipes", JSON.stringify(clonedRecipes));
   }
