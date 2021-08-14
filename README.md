@@ -1,4 +1,4 @@
-### Welcome to my recipe book
+## Welcome to my recipe book
 
 Check out my deployed version: https://nostalgic-lovelace-4ac2fe.netlify.app/
 
